@@ -1,0 +1,102 @@
+html {
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  display: block;
+  width: 700px;
+  margin: 0 auto;
+  padding: 170px 50px 20px 50px;
+}
+
+.hanoi-display {
+  width: 600px;
+}
+
+.disc {
+  background-color: #3498db;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.disc:nth-last-child(1) {
+  bottom: 20px;
+}
+
+.disc:nth-last-child(2) {
+  bottom: 40px;
+}
+
+.disc:nth-last-child(3) {
+  bottom: 60px;
+}
+
+.size1 {
+  width: 110px;
+}
+
+.size2 {
+  width: 130px;
+}
+
+.size3 {
+  width: 150px;
+}
+
+.tower {
+  float: left;
+  height: 150px;
+  width: 200px;
+  position: relative;
+}
+
+.tower:before {
+  content: "";
+  background-color: #d35400;
+  width: 90%;
+  height: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0px;
+}
+
+.tower:after {
+  content: "";
+  background-color: #d35400;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 0px;
+  width: 10%;
+  height: 100%;
+}
+
+.clicked > .disc {
+  box-shadow: 0 0 5px 5px gold;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.win {
+  text-align: center;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
